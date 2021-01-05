@@ -3,6 +3,8 @@
 
 
 <beans>
-	<bean id="triangle" class="org.prakruti.Triangle" />
+	<bean id="triangle" class="org.prakruti.Triangle">
+		<property name="type" value="Equilateral" />
+	</bean>
 	
 </beans>
