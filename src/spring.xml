@@ -4,7 +4,8 @@
 
 <beans>
 	<bean id="triangle" class="org.prakruti.Triangle">
-		<property name="type" value="Equilateral" />
+		<constructor-arg value="Equilateral" />
+		<constructor-arg value="20" />
 	</bean>
 	
 </beans>
