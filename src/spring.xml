@@ -4,8 +4,24 @@
 
 <beans>
 	<bean id="triangle" class="org.prakruti.Triangle">
-		<constructor-arg value="Equilateral" />
-		<constructor-arg value="20" />
+		<property name="pointA" ref="point1" />
+		<property name="pointB" ref="point2" />
+		<property name="pointC" ref="point3" />
+	</bean>
+	
+	<bean id="point1" class="org.prakruti.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="point2" class="org.prakruti.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="point3" class="org.prakruti.Point">
+		<property name="x" value="0" />
+		<property name="y" value="20" />
 	</bean>
 	
 </beans>
