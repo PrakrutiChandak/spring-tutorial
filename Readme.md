@@ -7,4 +7,5 @@
     * Session - new bean per session. a bean per user per session
     * Global Session - new bean per global HTTP session
  
- 
+# Bean inheritance
+ for list of beans, we can simply do <list merge="true"> to avoid overriding the existing properties

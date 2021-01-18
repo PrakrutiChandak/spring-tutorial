@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
+	
+
 
 <beans>
-	<bean id="triangle" class="org.prakruti.Triangle" autowire="byName">
+	<bean id="parenttriangle" class="org.prakruti.Triangle">
+		<property name="pointA" ref="pointA" />
+	</bean>
+	
+	<bean id="triangle" class="org.prakruti.Triangle" parent="parenttriangle">
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+	</bean>
+	
+	<bean id="grandtriangle" class="org.prakruti.Triangle" parent="parenttriangle">
+		<property name="pointB" ref="pointB" />
 	</bean>
 	
 	<bean id="pointB" name="pointB" class="org.prakruti.Point">
