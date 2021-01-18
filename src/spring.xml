@@ -26,5 +26,7 @@
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
+	
+	<bean class="org.prakruti.DisplayNameBeanPostProcessor" />
 
 </beans>
