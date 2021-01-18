@@ -5,18 +5,12 @@
 
 
 <beans>
-	<bean id="parenttriangle" class="org.prakruti.Triangle">
+	<bean id="triangle" class="org.prakruti.Triangle" init-method="init" destroy-method="cleanUp">
 		<property name="pointA" ref="pointA" />
-	</bean>
-	
-	<bean id="triangle" class="org.prakruti.Triangle" parent="parenttriangle">
 		<property name="pointB" ref="pointB" />
 		<property name="pointC" ref="pointC" />
 	</bean>
 	
-	<bean id="grandtriangle" class="org.prakruti.Triangle" parent="parenttriangle">
-		<property name="pointB" ref="pointB" />
-	</bean>
 	
 	<bean id="pointB" name="pointB" class="org.prakruti.Point">
 		<property name="x" value="0" />

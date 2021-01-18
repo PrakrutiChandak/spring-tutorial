@@ -9,3 +9,14 @@
  
 # Bean inheritance
  for list of beans, we can simply do <list merge="true"> to avoid overriding the existing properties
+ 
+# Lifecycle callbacks
+ * InitializingBean to perform after setting the properties 
+ * DisposableBean to perform clean up process
+ * these methods can also be created without any spring dependency  
+
+default init/destroy methods can be set as mentioned
+ 
+```
+	 <beans default-init-method="Myinit" default-destroy-method="cleanUp">
+```
