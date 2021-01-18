@@ -3,26 +3,20 @@
 
 
 <beans>
-	<bean id="triangle" class="org.prakruti.Triangle">
-		<property name="points">
-			<list>
-				<ref bean="pointA" />
-				<ref bean="pointB" />
-				<ref bean="pointC" />
-			</list>
-		</property>
+	<bean id="triangle" class="org.prakruti.Triangle" autowire="byName">
 	</bean>
-	<bean id="pointB" class="org.prakruti.Point">
+	
+	<bean id="pointB" name="pointB" class="org.prakruti.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
 
 	</bean>
-	<bean id="pointC" class="org.prakruti.Point">
+	<bean id="pointC" name="pointC" class="org.prakruti.Point">
 		<property name="x" value="-20" />
 		<property name="y" value="0" />
 
 	</bean>
-	<bean id="pointA" class="org.prakruti.Point">
+	<bean id="pointA" name="pointA" class="org.prakruti.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
