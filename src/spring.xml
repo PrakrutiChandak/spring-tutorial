@@ -5,7 +5,7 @@
 
 
 <beans>
-	<bean id="triangle" class="org.prakruti.Triangle" init-method="init" destroy-method="cleanUp">
+	<bean id="triangle" class="org.prakruti.Triangle">
 		<property name="pointA" ref="pointA" />
 		<property name="pointB" ref="pointB" />
 		<property name="pointC" ref="pointC" />
@@ -23,12 +23,12 @@
 
 	</bean>
 	<bean id="pointA" name="pointA" class="org.prakruti.Point">
-		<property name="x" value="${pointA.pointX}" />
-		<property name="y" value="${pointA.pointY}" />
+		<property name="x" value="0" />
+		<property name="y" value="0" />
 	</bean>
 	
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations" value="pointsconfig.properties" />
+	<bean id="circle" class="org.prakruti.Circle">
+		<property name="centre" ref="pointA" />
 	</bean>
-
+	
 </beans>

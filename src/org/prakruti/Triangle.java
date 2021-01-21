@@ -9,7 +9,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle implements Shape{
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
@@ -40,28 +40,12 @@ public class Triangle implements InitializingBean, DisposableBean{
 	}
 
 	public void draw() {
+		System.out.println("Drawing Triangle!!");
 		System.out.println("Point a = (" + pointA.getX() +"," + pointA.getY() + ")");
 		System.out.println("Point b = (" + pointB.getX() +"," + pointB.getY() + ")");
 		System.out.println("Point c = (" + pointC.getX() +"," + pointC.getY() + ")");
 
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("initialising beans init method called for Triangle!");
-	}
-
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("clean up process for the triangle started!");
-	}
-
-	public void init() {
-		System.out.println("spring independent init method for Triangle!");
-	}
-	
-	public void cleanUp() {
-		System.out.println("spring independent cleanUp method for Triangle!");
-	}
 
 }
