@@ -16,13 +16,13 @@ public class DrawingApp {
 	public static void main(String[] args) {
 //		Triangle triangle = new Triangle();
 //		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("srping.xml"));
+//		context.registerShutdownHook();
 		
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		context.registerShutdownHook();
 		Triangle triangle = (Triangle) context.getBean("triangle");
 		triangle.draw();
 		
 		
 	}
 
-}
+} 

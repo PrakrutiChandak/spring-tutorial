@@ -23,10 +23,12 @@
 
 	</bean>
 	<bean id="pointA" name="pointA" class="org.prakruti.Point">
-		<property name="x" value="0" />
-		<property name="y" value="0" />
+		<property name="x" value="${pointA.pointX}" />
+		<property name="y" value="${pointA.pointY}" />
 	</bean>
 	
-	<bean class="org.prakruti.DisplayNameBeanPostProcessor" />
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties" />
+	</bean>
 
 </beans>
