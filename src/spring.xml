@@ -24,14 +24,11 @@
 	</bean>
 	
 	<bean id="pointA" name="pointA" class="org.prakruti.Point">
-		<qualifier value="circleRelated" />
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
 	
-	<bean id="circle" class="org.prakruti.Circle">
-		<property name="centre" ref="pointA" />
-	</bean>
+	<context:component-scan base-package="org.prakruti" />
 	
 	<context:annotation-config />
 	

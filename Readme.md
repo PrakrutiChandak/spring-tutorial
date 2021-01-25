@@ -23,3 +23,9 @@ default init/destroy methods can be set as mentioned
 
 # Bean Post Processor 
  would give an error in case any annotations/dependencies are not met
+ 
+#Spring Component and Stereotype Annotation
+Component - lets you set the bean, its generic. for specification follow below
+ * Service - works similar to component and gives spring info that it is a service 
+ * Repository - works similar to component and gives spring info that it is a data
+ * Controller - works similar to component and gives spring info that it is a controller
