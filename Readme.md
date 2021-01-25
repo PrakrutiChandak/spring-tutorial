@@ -20,3 +20,6 @@ default init/destroy methods can be set as mentioned
 ```
 	 <beans default-init-method="Myinit" default-destroy-method="cleanUp">
 ```
+
+# Bean Post Processor 
+ would give an error in case any annotations/dependencies are not met
